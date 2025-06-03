@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Phản hồi khách hàng</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/feedback.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <div class="admin-logo"><h3>Admin</h3></div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Trang chính</a></li>
+          <li><a href="quanlysanpham.html"><i class="fas fa-box"></i> Quản lý sản phẩm</a></li>
+          <li><a href="donhang.html"><i class="fas fa-clipboard-list"></i> Quản lý đơn hàng</a></li>
+          <li><a href="khachhang.html"><i class="fas fa-users"></i> Quản lý khách hàng</a></li>
+          <li><a href="magiamgia.html"><i class="fas fa-tags"></i> Mã giảm giá</a></li>
+          <li><a href="thongke.html"><i class="fas fa-chart-line"></i> Thống kê</a></li>
+          <li><a href="feedback.html" class="active"><i class="fas fa-comments"></i> Phản hồi</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="main-header"><h2>Phản hồi khách hàng</h2></header>
+
+      <div class="content-area">
+        <input type="text" id="searchInput" placeholder="Tìm theo tên hoặc email...">
+        <table>
+          <thead>
+            <tr>
+              <th>Tên</th>
+              <th>Email</th>
+              <th>Nội dung</th>
+              <th>Ngày gửi</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody id="feedbackList">
+            <!-- Dữ liệu phản hồi sẽ được render tại đây -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/feedback.js"></script>
+</body>
+</html>

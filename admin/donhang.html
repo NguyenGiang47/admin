@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Quản lý đơn hàng</title>
+    <link rel="stylesheet" href="css/quanlysanpham.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="admin-logo">
+                <h3>Admin</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Trang chính</a></li>
+                    <li><a href="quanlysanpham.html"><i class="fas fa-box"></i> Quản lý sản phẩm</a></li>
+                    <li><a href="donhang.html" class="active"><i class="fas fa-clipboard-list"></i> Quản lý đơn hàng</a></li>
+                    <li><a href="khachhang.html"><i class="fas fa-users"></i> Quản lý khách hàng</a></li>
+                    <li><a href="magiamgia.html"><i class="fas fa-tags"></i> Mã giảm giá</a></li>
+                    <li><a href="thongke.html"><i class="fas fa-chart-line"></i> Thống kê</a></li>
+                    <li><a href="feedback.html"><i class="fas fa-comments"></i> Phản hồi</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h2>Quản lý đơn hàng</h2>
+                <div class="user-info">
+                    <span>Xin chào, Admin!</span>
+                </div>
+            </header>
+
+            <div class="content-area">
+                <div class="order-management">
+                    <div class="actions">
+                        <input type="text" id="searchOrder" placeholder="Tìm kiếm đơn hàng...">
+                    </div>
+
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Khách hàng</th>
+                                <th>Ngày đặt</th>
+                                <th>Tổng tiền</th>
+                                <th>Trạng thái</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orderTableBody">
+                            <!-- Dữ liệu đơn hàng sẽ được thêm bằng JavaScript -->
+                        </tbody>
+                    </table>
+
+                    <div id="orderModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close-button">&times;</span>
+                            <h3>Chi tiết đơn hàng</h3>
+                            <div id="orderDetails">
+                                <!-- Chi tiết đơn hàng sẽ hiển thị tại đây -->
+                            </div>
+                            <button type="button" class="btn btn-secondary cancel-button">Đóng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/trangchinh.js"></script>
+    <script src="js/quanlydonhang.js"></script>
+</body>
+</html>

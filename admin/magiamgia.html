@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý mã giảm giá</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/magiamgia.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="admin-layout">
+    <aside class="sidebar">
+        <div class="admin-logo"><h3>Admin</h3></div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Trang chính</a></li>
+                <li><a href="quanlysanpham.html"><i class="fas fa-box"></i> Quản lý sản phẩm</a></li>
+                <li><a href="donhang.html"><i class="fas fa-clipboard-list"></i> Quản lý đơn hàng</a></li>
+                <li><a href="khachhang.html"><i class="fas fa-users"></i> Quản lý khách hàng</a></li>
+                <li><a href="magiamgia.html" class="active"><i class="fas fa-tags"></i> Mã giảm giá</a></li>
+                <li><a href="thongke.html"><i class="fas fa-chart-line"></i> Thống kê</a></li>
+                <li><a href="feedback.html"><i class="fas fa-comments"></i> Phản hồi</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="main-header">
+            <h2>Quản lý mã giảm giá</h2>
+        </header>
+
+        <div class="content-area">
+            <div class="actions">
+                <button id="addDiscountBtn" class="btn btn-primary"><i class="fas fa-plus"></i> Thêm mã</button>
+                <input type="text" id="searchDiscount" placeholder="Tìm kiếm mã...">
+            </div>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Mã</th>
+                        <th>Giảm (%)</th>
+                        <th>Ngày bắt đầu</th>
+                        <th>Ngày kết thúc</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="discountTableBody">
+                    <!-- Nội dung thêm bằng JS -->
+                </tbody>
+            </table>
+
+            <!-- Modal -->
+            <div id="discountModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h3 id="modalTitle">Thêm mã giảm giá</h3>
+                    <form id="discountForm">
+                        <input type="hidden" id="discountId">
+                        <div class="form-group">
+                            <label for="discountCode">Mã giảm giá:</label>
+                            <input type="text" id="discountCode" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="discountValue">Giảm (%):</label>
+                            <input type="number" id="discountValue" required min="1" max="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="startDate">Ngày bắt đầu:</label>
+                            <input type="date" id="startDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="endDate">Ngày kết thúc:</label>
+                            <input type="date" id="endDate" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Lưu</button>
+                        <button type="button" class="btn btn-secondary cancel-button">Hủy</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="js/magiamgia.js"></script>
+</body>
+</html>

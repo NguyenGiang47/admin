@@ -1,0 +1,96 @@
+    <!DOCTYPE html>
+    <html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Dashboard - Quản lý sản phẩm</title>
+        <link rel="stylesheet" href="css/quanlysanpham.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <div class="admin-layout">
+            <aside class="sidebar">
+                <div class="admin-logo">
+                    <h3>Admin</h3>
+                </div>
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> Trang chính</a></li>
+                        <li><a href="quanlysanpham.html" class="active"><i class="fas fa-box"></i> Quản lý sản phẩm</a></li>
+                        <li><a href="donhang.html"><i class="fas fa-clipboard-list"></i> Quản lý đơn hàng</a></li>
+                        <li><a href="khachhang.html"><i class="fas fa-users"></i> Quản lý khách hàng</a></li>
+                        <li><a href="magiamgia.html"><i class="fas fa-tags"></i> Mã giảm giá</a></li>
+                        <li><a href="thongke.html"><i class="fas fa-chart-line"></i> Thống kê</a></li>
+                        <li><a href="feedback.html"><i class="fas fa-comments"></i> Phản hồi</a></li>
+                    </ul>
+                </nav>
+               
+            </aside>
+
+            <main class="main-content">
+                <header class="main-header">
+                    <h2>Quản lý sản phẩm</h2>
+                    <div class="user-info">
+                        <span>Xin chào, Admin!</span>
+                    </div>
+                </header>
+
+                <div class="content-area">
+                    <div class="product-management">
+                        <div class="actions">
+                            <button id="addProductBtn" class="btn btn-primary"><i class="fas fa-plus"></i> Thêm sản phẩm</button>
+                            <input type="text" id="searchProduct" placeholder="Tìm kiếm sản phẩm...">
+                        </div>
+
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Giá</th>
+                                    <th>Số lượng</th>
+                                    <th>Danh mục</th>
+                                    <th>Ảnh</th>
+                                    <th>Hành động</th>
+                                </tr>
+                            </thead>
+                            <tbody id="productTableBody">
+                                </tbody>
+                        </table>
+
+                        <div id="productModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close-button">&times;</span>
+                                <h3 id="modalTitle">Thêm sản phẩm mới</h3>
+                                <form id="productForm">
+                                    <input type="hidden" id="productId">
+                                    <div class="form-group">
+                                        <label for="productName">Tên sản phẩm:</label>
+                                        <input type="text" id="productName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productPrice">Giá:</label>
+                                        <input type="number" id="productPrice" step="1000" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productQuantity">Số lượng:</label>
+                                        <input type="number" id="productQuantity" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="productCategory">Danh mục:</label>
+                                        <input type="text" id="productCategory" required>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-primary">Lưu</button>
+                                    <button type="button" class="btn btn-secondary cancel-button">Hủy</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script src="js/index.js"></script> <script src="js/quanlysanpham.js"></script> </body>
+    </html>

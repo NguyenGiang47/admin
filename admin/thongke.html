@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thống kê</title>
+  <link rel="stylesheet" href="css/trangchinh.css">
+  <link rel="stylesheet" href="css/thongke.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <div class="admin-logo">
+        <h3>Admin</h3>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="trangchinh.html"><i class="fas fa-home"></i> Trang chính</a></li>
+          <li><a href="quanlysanpham.html"><i class="fas fa-box"></i> Quản lý sản phẩm</a></li>
+          <li><a href="donhang.html"><i class="fas fa-clipboard-list"></i> Quản lý đơn hàng</a></li>
+          <li><a href="khachhang.html"><i class="fas fa-users"></i> Quản lý khách hàng</a></li>
+          <li><a href="magiamgia.html"><i class="fas fa-tags"></i> Mã giảm giá</a></li>
+          <li><a href="thongke.html" class="active"><i class="fas fa-chart-line"></i> Thống kê</a></li>
+          <li><a href="feedback.html"><i class="fas fa-comments"></i> Phản hồi</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="main-header">
+        <h2>Thống kê</h2>
+      </header>
+
+      <div class="content-area">
+        <div class="stat-grid">
+          <div class="stat-card">
+            <h4>Tổng sản phẩm</h4>
+            <p id="totalProducts">0</p>
+          </div>
+          <div class="stat-card">
+            <h4>Tổng đơn hàng</h4>
+            <p id="totalOrders">0</p>
+          </div>
+          <div class="stat-card">
+            <h4>Khách hàng</h4>
+            <p id="totalCustomers">0</p>
+          </div>
+          <div class="stat-card">
+            <h4>Tổng doanh thu</h4>
+            <p id="totalRevenue">0 VNĐ</p>
+          </div>
+        </div>
+
+        <canvas id="revenueChart" height="100"></canvas>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/thongke.js"></script>
+</body>
+</html>
